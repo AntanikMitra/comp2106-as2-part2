@@ -60,8 +60,8 @@ router.get('/register', function(req, res, next) {
 
 
 // Get welcome - show welcome page for authentication users
-router.get('/welcome',isLoggedIn, function(req, res, next){
-    res.render('auth/welcome',{
+router.get('/',isLoggedIn, function(req, res, next){
+    res.render('/directorys',{
         
         title: 'welcome',
         user: req.user
@@ -78,7 +78,7 @@ router.post('/register',isLoggedIn, function(req, res, next) {
         }
         else {
             req.login(account, function(err) {
-                res.redirect('auth/login');
+                res.redirect('/directorys');
             });
         }
     });

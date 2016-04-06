@@ -1,7 +1,7 @@
 // link to mongoose
 var mongoose = require('mongoose');
 
-// define the article schema
+// define the directory schema
 var directorySchema = new mongoose.Schema({
     name: {
         type: String,

@@ -1,0 +1,19 @@
+<%- include ../partials/header.ejs %>
+
+<main class="container">
+    <h1>Reservation</h1>
+
+    <a href="/directorys/add" title="Add Reservation">Add a new Reservation</a>
+
+    <ul class="list-group">
+        <% for (var i = 0; i < directory.length; i++) { %>
+            <li class="list-group-item">
+            <a href="/directorys/<%= directory[i]._id%>" title="Read More">
+                    <%= directory[i].name %></a>
+            </li>
+        <% } %>
+    </ul>
+</main>
+
+</body>
+</html>
